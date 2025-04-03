@@ -1,0 +1,14 @@
+name: Reproducible builds
+run-name: ${{ github.actor }} is building 🚀
+on: [push]
+jobs:
+  Build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: make
+      - run: sha256sum dist/trezorctl
+      - uses: actions/upload-artifact@v4
+        with:
+          name: trezorctl
+          path: dist/trezorctl
