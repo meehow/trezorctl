@@ -6,6 +6,9 @@
 
 - Download [udev rules](https://data.trezor.io/udev/51-trezor.rules)
 
+- Install udev rules
+    > sudo cp 51-trezor.rules /etc/udev/rules.d/
+
 - Download firmware suitable for your device
     > ./trezorctl firmware download
     - You can also download firmware file directly. I.e. by the time of writing, the newest version for Trezor Safe 3 was: https://data.trezor.io/firmware/t2b1/trezor-t2b1-2.8.9.bin
@@ -14,10 +17,6 @@
 
 - Authenticity of the device can be verified only online
     > ./trezorctl device authenticate
-
-- Install udev rules
-
-    > sudo cp 51-trezor.rules /etc/udev/rules.d/
 
 - Update firmware (filename of firmware for your device can be different)
 
