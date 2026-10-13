@@ -11,16 +11,21 @@
 
 - Download firmware suitable for your device
     > ./trezorctl firmware download
-    - You can also download firmware file directly. I.e. by the time of writing, the newest version for Trezor Safe 3 was: https://data.trezor.io/firmware/t2b1/trezor-t2b1-2.8.9.bin
+    - You can also download firmware file directly. I.e. by the time of writing, the newest version for Trezor Safe 3 was: https://data.trezor.io/firmware/t2b1/trezor-t2b1-2.12.5.bin
 
-        sha256sum: 437916c8af0a7cd64c2a7c6ac34ca7a249293ff397b68c1f2b560eca6dddb17a
+        sha256sum: 7abd72b2be837b3d1f1f9ac5246f9a3e3e3ae83a562599a6e20eb2fea3fbfd37
+
+- Verify firmware signature and fingerprint. The fingerprint is also shown on the device during update.
+    > ./trezorctl firmware verify trezor-t2b1-2.12.5.bin
+
+        Firmware fingerprint: ec7d7c45053f5ade66c362d338aa57aaa018d234d3810ea9d1cec44c6a60c70e
 
 - Authenticity of the device can be verified only online
     > ./trezorctl device authenticate
 
 - Update firmware (filename of firmware for your device can be different)
 
-    > ./trezorctl firmware update -f trezor-t2b1-2.8.9.bin
+    > ./trezorctl firmware update -f trezor-t2b1-2.12.5.bin
 
 - Start setup process
 

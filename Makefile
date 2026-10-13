@@ -1,7 +1,10 @@
 all: venv
 	venv/bin/pip install \
-		pyinstaller==6.12.0 \
-		trezor==0.13.10
+		pyinstaller==6.22.3 \
+		trezor==0.20.2
+	# RECORD files hold hashes of venv/bin scripts, whose shebangs contain
+	# the absolute build path; they get bundled and break reproducibility
+	rm -f venv/lib/python3*/site-packages/*.dist-info/RECORD
 
 	PYTHONHASHSEED=1 \
 	venv/bin/pyinstaller \
