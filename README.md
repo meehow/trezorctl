@@ -1,6 +1,6 @@
 # Trezor Setup
 
-- Download trezorctl.zip from [actions](https://github.com/meehow/trezorctl/actions). 
+- Download `trezorctl` from [releases](https://github.com/meehow/trezorctl/releases/latest) and make it executable (`chmod +x trezorctl`).
 
     Build steps are designed to be reproducible. Building on different machines should produce identical binaries.
 
